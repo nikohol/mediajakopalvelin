@@ -1,0 +1,2 @@
+# mediajakopalvelin
+mediajakopalvelin pelaajille
