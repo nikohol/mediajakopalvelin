@@ -1,0 +1,374 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+}
+
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+header {
+    background-image: url(http://placekitten.com/960/100);
+    background-position: center;
+}
+.topbar {
+    width: 100%;
+    height: 2em;
+    /*float: center;*/
+}
+
+.topbar ul {
+    padding: 0em;
+    margin: 0em;
+    padding-left: relative;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    background-color: #c1fe85;
+    position: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    /*display: flex;*/
+}
+.topbar li {
+    padding: 0;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin: 0;
+    display: inline;
+    max-width: 10%;
+    max-height: 100%;
+    float: left;
+    /*flex-wrap: wrap;*/
+    
+}
+.topbar img {
+    max-height: 1em;
+    max-width: 1em;
+    /*flex-wrap: wrap;*/
+    /*justify-content: space-between;*/
+    
+}
+.topbar .right {
+    float: right;
+    font-size: 12px;
+    /*justify-content: flex-end;
+    align-items: baseline;*/
+}
+/*.topbar .left {
+    float: left;
+    justify-content: flex-start;
+    align-items: baseline;
+}*/
+.topbar h1 {
+    font-size: 100%
+}
+./*login_logo {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+}*/
+/*.topbar {
+    padding: 0.5em;
+    padding-left: relative;
+    width: 100%;
+    height: 15px;
+    margin: 1em;
+    display: inline-block;
+    background-color: #c1fe85;
+}*/
+/*.nav_image {
+    width: 0.4em;
+    height: 0.5em;
+    display: inline;
+}*/
+.primary-color {
+    background-color: #c1fe85;
+    margin: 1em;
+    padding: 1em;
+}
+.secondary-color {
+    background-color: #a8bf12;
+    margin: 0.5em;
+
+}
+.titleCategory {
+    font-family: Helvetica;
+    font-size: 50px;
+}
+/*ul {
+    list-style-type: none;
+    padding: 0px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    overflow-x: hidden;
+    width: 100%;
+    min-height: 150px;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-padding-start: 10px;
+}*/
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+li {
+    padding: 1em;
+    display: inline-block;
+    margin: auto; 
+    width: 33%;
+    flex-wrap: wrap;
+}
+/*}
+.rowCategory {
+
+}*/
+.category {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+}
+.rowCategory {
+    padding: 5px;    
+    overflow: hidden;
+    height: 224px;
+    width: 200%; /* approx. 15*170 */    
+    list-style-type: none;      
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-padding-start: 10px;
+}
+/*.rowCategory {
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}*/
+
+/*.titleCategory {
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.category {
+    overflow-x: auto;
+    overflow-x: hidden;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+}*/
+/*.rowCategory {
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap; padding: 5px;
+    overflow: hidden;
+    height: 224px;
+    width: 100%x;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-padding-start: 10px;
+}*/
+.login_logo {
+    display: inline;
+    height: relative;
+}*/
+/*+    overflow: hidden;
++    height: 224px;
++    width: 2600px; /* approx. 15*170    
++    list-style-type: none;      
++    -webkit-margin-before: 0;
+   -webkit-margin-after: 0;
+   -webkit-padding-start: 10px;*/
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

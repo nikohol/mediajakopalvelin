@@ -1,0 +1,156 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Tits_le</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body class="secondary-color">
+
+        <header>
+           <!--
+           This is out top nav bar which has Search image and bar.
+           On the right side of nav there is sign up, login and setting
+           in the same order.
+           -->
+            <nav class="topbar">
+            <ul>
+                <li>
+                    <img class="left" src="img/login_logo.png" alt="login_logo">
+                </li>
+                <li>
+                    <h1 class="left">Search</h1>
+                </li>
+                <li>
+                    <a href="signup.html" class="right">Sign Up</a>
+                </li>
+                <li>
+                    <a href="login.html"><img class="right" src="img/login_logo.png" alt="login_logo"></a>
+                </li>
+                <li>
+                    <img class="right" src="img/login_logo.png" alt="login_logo">
+                </li>
+            </ul>
+            </nav>
+        </header>
+
+        <main class="primary-color">
+            
+            <div class="container">
+
+                <!--
+                h2 should be visible on left side on screen
+                even when pictures in sections below are swiped.
+                -->
+                <h2 class="titleCategory">Most Recent</h2>               
+                     
+                     <!--
+                     section images controlled with .js
+                     and size of section is controlled by how many
+                     pictures is in the section. Maximum amount of
+                     pics could be 9?!
+                     -->
+
+                    <section>
+                        <!--
+                        Images will be inside own lists on each section.
+                        -->
+                        <div class="category">
+                            <ul class="rowCategory">
+                                <!--
+                                Only the first image has link to commenting screen in wireframe
+                                $_GET can be used to generate new page for commenting etc.
+                                -->
+                                <li class="rowImage">
+                                    <a href="openimage.html">
+                                    <img src="http://placekitten.com/400/361">
+                                    </a>
+                                </li>
+                                <li>
+                                    <img src="http://placekitten.com/400/361">
+                                </li>
+                                <li>
+                                    <img src="http://placekitten.com/400/361">
+                                </li>
+                                <li>
+                                    <img src="http://placekitten.com/400/361">
+                                </li>
+                                <li>
+                                    <img src="http://placekitten.com/400/361">
+                                </li>
+                                <li>
+                                    <img src="http://placekitten.com/400/361">
+                                </li>
+                                <li>
+                                    <img src="http://placekitten.com/400/361">
+                                </li>
+                                <li class="rowImage">
+                                    <img src="http://placekitten.com/400/361">
+                                </li>
+                                <li class="rowImage">
+                                    <img src="http://placekitten.com/400/361">
+                                </li>
+                                <li class="rowImage">
+                                    <img src="http://placekitten.com/400/361">
+                                </li>
+                            </ul>
+                        </div>                             
+                    </section>
+                <h2 class="titleCategory">Trending</h2>
+                    <section>
+                        <div class="titleCategory"></div>
+                        <div class="category">
+                            <ul class="rowCategory">
+                                <li class="rowImage">
+                                    <img src="http://placekitten.com/400/361">
+                                </li>
+                                <li>
+                                    <img src="http://placekitten.com/400/361">
+                                </li>
+                                <li>
+                                    <img src="http://placekitten.com/400/361">
+                                </li>
+                            </ul>
+                        </div> 
+                    </section>
+                <h2 class="titleCategory">Friends</h2>
+                    <section>
+                        <div class="titleCategory"></div>
+                        <div class="category">
+                            <ul class="rowCategory">
+                                <li class="rowImage">
+                                    <img src="http://placekitten.com/400/361">
+                                </li>
+                                <li>
+                                    <img src="http://placekitten.com/400/361">
+                                </li>
+                                <li>
+                                    <img src="http://placekitten.com/400/361">
+                                </li>
+                            </ul>
+                        </div> 
+                    </section>
+
+            </div>
+        </main>
+        <!--
+        Below there might lie chtulhu.
+        -->
+        <footer><p>Terms of service :D</p></footer>
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
