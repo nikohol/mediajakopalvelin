@@ -13,20 +13,30 @@ a{
 	text-decoration: none;
 }
 /*this header is a navigation bar */
+
 header{
-	text-align: center;
-	position: relative;
-	font-family: 'Quicksand', sans-serif;
-	background-color: red;
-	height: auto;
-	padding: 10px;
+    text-align: center;
+    position: relative;
+    font-family: 'Helvetica', sans-serif;
+    background-color: red;
+    min-height: 3em;
+    padding: 10px;
 }
-.wrapper, .logo{
-	height: 100%;
-	position: relative;
+/*header {
+    width: 100%
+    height: 10%;
+}*/
+.left_logo img{
+    height: 3em;
+    width: relative;
 }
-.logo img{
-	height: 90%;
+.topNav {
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+
 }
 .center{
 	display: inline-block;
@@ -68,7 +78,7 @@ main{
 }
 
 .title{
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Helvetica', sans-serif;
 	font-size: 45px;
 	margin: 20px 0; 
 	color: white;
@@ -78,7 +88,7 @@ main{
 #user_login > label{
 	display: block;
 	margin: 25px 0 10px 0;
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Helvetica', sans-serif;
 	color: white;
 	font-size: 20px;
 }
@@ -121,7 +131,7 @@ footer {
 }
 
 footer > p{
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Helvetica', sans-serif;
 }
 
 @media (max-width: 800px){

@@ -14,36 +14,26 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js"></script>
     </head>
-    <body class="secondary-color">
+    <body>
 
         <header>
-           <!--
-           This is out top nav bar which has Search image and bar.
-           On the right side of nav there is sign up, login and setting
-           in the same order.
-           -->
-            <nav class="topbar">
-            <ul>
-                <li>
-                    <img class="left" src="img/login_logo.png" alt="login_logo">
-                </li>
-                <li>
-                    <h1 class="left">Search</h1>
-                </li>
-                <li>
-                    <a href="signup.html" class="right">Sign Up</a>
-                </li>
-                <li>
-                    <a href="login.html"><img class="right" src="img/login_logo.png" alt="login_logo"></a>
-                </li>
-                <li>
-                    <img class="right" src="img/login_logo.png" alt="login_logo">
-                </li>
-            </ul>
+            <nav class="topNav">
+                <div class="left_logo">
+                    <a href="index.html"><img src="img/GSLogo.png" alt="GameShare"/></a>
+                </div>
+                <div>
+                    <form method="post" id="search-form">
+                        <input class="search-box" type="text" name="search" placeholder="Search for content..." />
+                    </form>
+                    <a href="login.html">Login / Sign Up</a>
+                </div>
+                <div>
+                    Tools here?
+                </div>
             </nav>
         </header>
 
-        <main class="primary-color">
+        <main>
             
             <div>
                 <h2>Most Recent</h2>
@@ -180,7 +170,22 @@
         <!--
         Below there might lie chtulhu.
         -->
-        <footer><p>Terms of service :D</p></footer>
+        <footer>
+            <div class="footer-inner">
+                <div class="footer-col footer-left">
+                    <a class="logo" href="index.html"><img src="img/GSLogo.png" alt="GameShare"/></a>
+                    <!-- <div class="description">
+                        <p> A land for creatives sharing their works, projects, and process. Looking for an inspiration? You're on the right track.</p>
+                    </div> -->
+                </div>
+                <div class="footer-col footer-right">
+                    <ul class="extra">
+                        Maybe add something here later if need be!
+                    </ul>
+                </div>
+            </div>
+            <p class="copyright"> No rights reserved :O </p>
+        </footer>
 
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
