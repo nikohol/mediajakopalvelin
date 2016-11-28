@@ -99,6 +99,10 @@ header{
     background-position: 5px 50%;
     color: red;   
 }
+.login_logo {
+    display: inline;
+    height: relative;
+}
 .topNav div {
     font-family: 'Helvetica'
 }
@@ -111,12 +115,29 @@ header{
 }
 .container li {
     display: inline-block;
-    margin: auto; 
-    width: 33%;
+    /*margin: auto; */
+    width: 30%;
 }
-.login_logo {
-    display: inline;
-    height: relative;
+.container figure {
+    margin: 0.5em;
+    position: relative;
+}
+.container figure img {
+    max-width: 100%
+
+
+}
+.container figcaption h3{
+    margin: 0;
+    text-align: center;
+    font-family: 'Helvetica';
+    font-size: 16px;
+}
+.container figure:hover > figcaption{
+    display: block;
+    position: absolute;
+    top: 0px;
+    width: 100%;
 }
 footer {
     box-shadow: 0 -3px 10px #ddd;
