@@ -108,7 +108,7 @@ main{
 	color: white;
 }
 
-#user-username, #user-password{
+#username, #password{
 	width: 150%;
 	height: 30px;
 }
@@ -118,7 +118,7 @@ main{
 		flex-direction: column;
 	}
 	
-	#user-username, #user-password{
+	#username, #password{
 		width: 100%;
 	}
 }

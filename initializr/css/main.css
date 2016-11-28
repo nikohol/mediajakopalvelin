@@ -115,7 +115,6 @@ header{
 }
 .container li {
     display: inline-block;
-    /*margin: auto; */
     width: 30%;
 }
 .container figure {
