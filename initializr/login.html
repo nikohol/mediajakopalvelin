@@ -1,21 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <title>Suhteetonta</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <main>
-            <div>
-                <form action="TestServlet" method="post">
-                    Username:<br>
-                    <input type="text" name="Username" required=""><br>
-                    Password<br>
-                    <input type="text" name="Password" required=""><br>
-                    <button type="submit">Log In</button><br>
-                </form>
-            </div>
-        </main> 
-    </body>
+<head>
+<meta charset="utf-8">
+<title>Login</title>
+<link href="css/login.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<div class="wrapper">
+			<div class="left logo">
+				<a href="index.html"><img src="img/GSLogo.png" alt="GameShare"/></a>
+			</div>
+			<div class="center">
+				<form method="post" id="search-form">
+					<input class="search-box" type="text" name="search" placeholder="Search for content..." />
+				</form>
+				<a class="sign-in" href="signup.html">Login / Sign Up</a>
+			</div>
+	  		<div class="right">
+				Tools here?
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="user-login">
+			<h4 class="title"> Login </h4>
+			<form method="post" action="" id="user_login" accept-charset="UTF-8">
+				<label for="user-username">Username:</label>
+				<input class="large" type="text" id="user-username" name="username" required>
+				<label for="user-password">Password:</label>
+				<input class="large" type="password" id="user-password" name="passowrd" required>
+				<input class="sign-btn" type="submit" id="submit" name="submit" value="Login">
+			</form>
+		</div>
+		<div>
+		<h5 class="title"> Sign Up </h5>
+			<form method="post" action="" id="user_login" accept-charset="UTF-8">
+				<label for="user-username">Username:</label>
+				<input class="large" type="text" id="user-username" name="username" required>
+				<label for="user-password">Password:</label>
+				<input class="large" type="password" id="user-password" name="passowrd" required>
+				<label for="user-password"> Confirm Password:</label>
+				<input class="large" type="password" id="user-password" name="passowrd" required>
+				<input class="sign-btn" type="submit" id="submit" name="submit" value="Sign Up">
+			</form>
+		</div>
+	</main>
+	<footer>
+		<div class="footer-inner">
+			<div class="footer-col footer-left">
+				<a class="logo" href="index.html"><img src="img/GSLogo.png" alt="GameShare"/></a>
+				<!-- <div class="description">
+					<p> A land for creatives sharing their works, projects, and process. Looking for an inspiration? You're on the right track.</p>
+				</div> -->
+			</div>
+			<div class="footer-col footer-right">
+				<ul class="extra">
+					Maybe add something here later if need be!
+				</ul>
+			</div>
+		</div>
+		<p class="copyright"> No rights reserved :O </p>
+	</footer>
+</body>
 </html>
