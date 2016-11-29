@@ -1,13 +1,14 @@
 html{
 	margin: 0;
 	padding: 0;
+	background-color: #F4511E;
 }
 body{
 	margin: 0;
 	padding: 0;
 	width: 100%;
 	color: white;
-	background-image: URL("../img/backgrounds/default.jpg");
+	/*background-image: URL("../img/backgrounds/default.jpg");*/
 }
 a{
 	text-decoration: none;
@@ -21,6 +22,7 @@ header{
     background-color: red;
     min-height: 3em;
     padding: 10px;
+    box-shadow: 0 3px 10px #ddd;
 }
 /*header {
     width: 100%
