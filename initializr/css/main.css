@@ -62,12 +62,23 @@ textarea {
     width: 100%
     height: 10%;
 }*/
+html{
+    background-color: #F4511E;
+}
+/*main {
+    background-color: #F4511E;
+}*/
+main h2 {
+    font-family: 'Helvetica', sans-serif;
+    color: black;
+    background-color: #F4511E;
+}
 body{
     margin: 0;
     padding: 0;
     width: 100%;
     color: white;
-    background-image: URL("../img/backgrounds/default.jpg");
+    /*background-image: URL("../img/backgrounds/default.jpg");*/
 }
 header{
     text-align: center;
@@ -76,6 +87,8 @@ header{
     background-color: red;
     min-height: 3em;
     padding: 10px;
+    box-shadow: 0 3px 10px #ddd;
+    
 }
 .left_logo img{
     height: 3em;
