@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <title>Login</title>
 <link href="css/openimage.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 </head>
     <body>
@@ -19,7 +20,14 @@
                     <a href="login.html">Login / Sign Up</a>
                 </div>
                 <div>
-                    <a href="menu.html">Tools here?</a>
+                    <div class="dropdown">
+						<button onclick="myFunction()" class="dropbtn">Menu</button>
+						<div id="myDropdown" class="dropdown-content">
+							<a href="#">Link 1</a>
+							<a href="#">Link 2</a>
+							<a href="#">Link 3</a>
+						</div>
+					</div>
                 </div>
             </nav>
         </header>
@@ -37,11 +45,13 @@
 				<input class="likes" type="submit" id="like" name="like" value="Like!"><br>
 				<h2 class="imgTitle"> Comments</h2>
                 <section class="comments">
+					<!-- get the comments from sql!!!!!! -->
                     <li><article>This is a comment</article></li>
                     <li><article>Another</article></li>
                     <li><article>more comment</article></li>
                 </section>
 				<form>
+						<!-- comment input & report / comment buttons both intentionally require input! -->
 						<input class="write" type="text" id="write" name="comment" placeholder="Write a comment or report content message!" required /><br>
 						<input class="submit" type="submit" id="comment" name="like" value="Comment!">
 						<input class="submit" type="submit" id="comment" name="like" value="Report!">
@@ -64,5 +74,6 @@
 		</div>
 		<p class="copyright"> No rights reserved :O </p>
 		</footer>
+		<script src="js/openimage.js"></script>
     </body>
 </html>
