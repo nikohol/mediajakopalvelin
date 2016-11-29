@@ -14,12 +14,12 @@
                 </div>
                 <div>
                     <form method="post" id="search-form">
-                        <input class="search-box" type="text" name="search" placeholder="Search for content..." />
+                        <input class="search" type="text" name="search" placeholder="Search for content..." />
                     </form>
                     <a href="login.html">Login / Sign Up</a>
                 </div>
                 <div>
-                    Tools here?
+                    <a href="menu.html">Tools here?</a>
                 </div>
             </nav>
         </header>
@@ -31,21 +31,21 @@
                 <figure>
                     <img src="http://placekitten.com/400/361">					
                 </figure>
-				<input class="likes" type="submit" id="like" name="like" value="Like!">
+				<figcaption>
+					<article class= "likecounter"> integer from sql likes!</article>
+				</figcaption>
+				<input class="likes" type="submit" id="like" name="like" value="Like!"><br>
 				<h2 class="imgTitle"> Comments</h2>
                 <section class="comments">
-                    <article>This is a comment</article>
-                    <article>Another</article>
-                    <article>more comment</article>
-					<form>
+                    <li><article>This is a comment</article></li>
+                    <li><article>Another</article></li>
+                    <li><article>more comment</article></li>
                 </section>
-                <aside>
-                    <figure>
-                        <figcaption>
-                            likebutton
-                        </figcaption>
-                    </figure>
-                </aside>
+				<form>
+						<input class="write" type="text" id="write" name="comment" placeholder="Write a comment or report content message!" required /><br>
+						<input class="submit" type="submit" id="comment" name="like" value="Comment!">
+						<input class="submit" type="submit" id="comment" name="like" value="Report!">
+				</form>
             </div>
         </main> 
 		<footer>
