@@ -24,6 +24,9 @@ public class UserResource {
 
     @Context
     private UriInfo context;
+    // remember this!!!
+    @EJB
+    private GameShareSB gssb;
 
     /**
      * Creates a new instance of UserResource
