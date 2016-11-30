@@ -31,30 +31,21 @@ window.onclick = function(event) {
   }
 }*/
 /* Set the width of the side navigation to 250px */
+
+
+/*
+
+*/
 $('.vasen-navi li:first-child').click(function(evt){
 				evt.preventDefault();
 				$('.vasen-navi li:not(:first)').slideToggle(400);
 			});
-			
-			$(window).scroll(ylaNavi);
-			$(window).resize(ylaNavi);
-			
-			function ylaNavi(){
-				if($(window).scrollTop() > 160){
-					console.log($(window).scrollTop());
-					var mainWidth = $('main').width();
-					var mainPos = $('main').position();
-					var leveys = Number(mainWidth)+32;
-					$('.yla-navi').attr('style', 'position:fixed;  bottom:0; left:'+mainPos.left+'px; width:'+leveys+'px');
-				} else {
-					$('.yla-navi').attr('style', 'position:static;');
-				}
-			}
-
+/*
+Top right menu button and it's caleld withv myFunction();
+*/
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
-
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
