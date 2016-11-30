@@ -166,10 +166,12 @@ Also all <main> starts at this point so it modifies content view.
     margin: 0;
     font-family: 'Helvetica', sans-serif;
 }
+.container {
+    margin: auto;
+}
 .container ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
     display: flex;
     flex-wrap: wrap;
 }
