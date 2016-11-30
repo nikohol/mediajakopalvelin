@@ -127,6 +127,7 @@ Also all <main> starts at this point so it modifies content view.
 
 .left-nav {
     width: 16%;
+    height: 100%;
     float: left;
 }
 
@@ -160,14 +161,28 @@ Also all <main> starts at this point so it modifies content view.
 .grey {
     background-color: #424242;
 }
-.content h2 {
+.lightgrey {
+    background-color: #616161;
+}
+.title {
     display: inline-block;
+    width: 84%;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+.content section {
+        padding-left: 16%;
+}
+.content h2 {
+    text-align: right;
     padding: 1em;
     margin: 0;
     font-family: 'Helvetica', sans-serif;
 }
 .container {
-    margin: auto;
+    margin: 0;
+    /*padding-left: 16%;*/
 }
 .container ul {
     list-style-type: none;
