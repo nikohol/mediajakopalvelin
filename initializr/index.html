@@ -18,8 +18,14 @@
 
     <body>
 
+    <!--
+    In the header there is topmost navigation bar which includes logo (a link back to home), search bar, login/signup and on the right the is menu button made with .js and that button includes functionalities for different user tools
+    -->
 
         <header>
+            <!--
+            topNav holds content for topmost navigation bar. In .css modify content with .topNav .left_logo .search .dropdown
+            -->
             <nav class="topNav">
                 <div class="left_logo">
                     <a href="index.html"><img src="img/GSLogo.png" alt="GameShare"/></a>
@@ -31,6 +37,9 @@
                     <a href="login.html">Login / Sign Up</a>
                 </div>
                 <div>
+                <!--
+                JavaScript callout for top right Menu button
+                -->
                     <div class="dropdown">
                         <button onclick="myFunction()" class="dropbtn">Menu</button>
                         <div id="myDropdown" class="dropdown-content">
@@ -38,6 +47,7 @@
                             <a href="#">My profile</a>
                             <a href="#">Admin tools</a>
                         </div>
+                    </div>
             </nav>
             
         </header>
