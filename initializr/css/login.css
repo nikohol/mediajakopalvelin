@@ -1,8 +1,4 @@
-html{
-	margin: 0;
-	padding: 0;
-	background-color: #F4511E;
-}
+
 body{
 	margin: 0;
 	padding: 0;
@@ -10,12 +6,10 @@ body{
 	color: white;
 	/*background-image: URL("../img/backgrounds/default.jpg");*/
 }
-a{
-	text-decoration: none;
-}
+
 /*this header is a navigation bar */
 
-header{
+/*header{
     text-align: center;
     position: relative;
     font-family: 'Helvetica', sans-serif;
@@ -28,6 +22,7 @@ header{
     width: 100%
     height: 10%;
 }*/
+/*
 .left_logo img{
     height: 3em;
     width: relative;
@@ -39,46 +34,100 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
-.center{
-	display: inline-block;
+*/
+header{
+    text-align: center;
+    position: relative;
+    font-family: 'Helvetica', sans-serif;
+    background-color: red;
+    min-height: 3em;
+    padding: 10px;
+    box-shadow: 0 3px 10px #ddd;
+    
 }
-.left {
-	position: absolute;
-	left: 15px;
-	display: inline-block;
-	
+.topNav {
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.right {
-	position: absolute;
-	right: 15px;
-	display: inline-block;
+.left_logo img{
+    height: 3em;
+    width: relative;
 }
 .search{
-	font-size: 15px;
-	width: 200px;
-	padding: 5px 5px 5px 35px;
-	border-radius: 4px;
-	border: none;
-	background-color: white;
-	background-position: 5px 50%;
-	color: red;
-	
+    font-size: 15px;
+    width: 200px;
+    padding: 5px 5px 5px 35px;
+    border-radius: 4px;
+    border: none;
+    background-color: white;
+    background-position: 5px 50%;
+    color: red;   
 }
-.sign-in{
-	text-decoration: none;
-	font-size: 18px;
-	color: white;
+.login_logo {
+    display: inline;
+    height: relative;
+}
+.topNav div {
+    font-family: 'Helvetica'
+}
+/*
+.css for left navigation bar. Should be looking same all the time even when
+scrolling down on content.
+Also all <main> starts at this point so it modifies content view.
+*/
+
+.left-nav {
+    width: 16%;
+    height: 100%;
+    float: left;
+}
+
+.left-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.left-nav a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    line-height: 3em;
+    border-bottom: 1px #EDEEEF solid;
+    color: inherit;
+}
+
+.left-nav a:hover {
+    background-color: rgba(237,238,239,0.5);
+}
+
+.left-nav li:first-child {
+    display: none;
+}
+
+/*
+.css for modifying content of the website
+*/
+
+.grey {
+    background-color: #424242;
+}
+.lightgrey {
+    background-color: #616161;
 }
 
 /* Main stuff starts here */
-main{
+/*main{
 	margin: 100px 50px;
 	display: flex;
 	justify-content: space-around;
 	
-}
+}*/
 
 .title{
 	font-family: 'Helvetica', sans-serif;
@@ -86,7 +135,71 @@ main{
 	margin: 20px 0; 
 	color: white;
 }
+.content div{
+	padding: 1em;
+}
+.content section {
+	padding-left: 16%;
+}
 
+/*
+MENU Button
+
+css for menubutton in topright corner
+*/
+.dropbtn {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    font-size: 10px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: black;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    float:right;
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+@media (max-width: 800px){
+    footer .logo img{
+        width: 20%;
+    }
+}
 
 #user_login > label{
 	display: block;

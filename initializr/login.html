@@ -1,51 +1,91 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Login</title>
-<link href="css/login.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+	<meta charset="utf-8">
+	<title>Login</title>
+	<link href="css/login.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js"></script>
 </head>
 
 <body>
 	<header>
-		<nav class="topNav">
-                <div class="left_logo">
-                    <a href="index.html"><img src="img/GSLogo.png" alt="GameShare"/></a>
-                </div>
-                <div>
-                    <form method="post" id="search-form">
-                        <input class="search" type="text" name="search" placeholder="Search for content..." />
-                    </form>
+            <!--
+            topNav holds content for topmost navigation bar. In .css modify content with .topNav .left_logo .search .dropdown
+            -->
+        <nav class="topNav">
+            <div class="left_logo">
+                <a href="index.html"><img src="img/GSLogo.png" alt="GameShare"/></a>
+            </div>
+            <div>
+                <form method="post" id="search-form">
+                    <input class="search" type="text" name="search" placeholder="Search for content..." />
+                </form>
                     <a href="login.html">Login / Sign Up</a>
+            </div>
+            <div>
+                <!--
+                JavaScript callout for top right Menu button
+                -->
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Menu</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Upload</a>
+                        <a href="#">My profile</a>
+                        <a href="#">Admin tools</a>
+                    </div>
                 </div>
-                <div>
-                    <a href="menu.html">Tools here?</a>
-                </div>
-            </nav>
-	</header>
+            </div>
+        </nav>
+            
+    </header>
+
+    <nav class="left-nav">
+                <ul>
+                <li>
+                    <a href="#">&#9776;</a>
+                 </li>
+                <li>
+                    <a href="index.html">Most Recent</a>                        
+                </li>
+                <li>
+                    <a href="about.html">Popular</a>
+                 </li>
+                <li>
+                    <a href="development.html">Friends</a>
+                </li>
+            </ul>
+    </nav>
+
 	<main>
-		<div class="user-login">
-			<h4 class="title"> Login </h4>
-			<form method="post" action="" id="user_login" accept-charset="UTF-8">
-				<label for="username">Username:</label>
-				<input class="large" type="text" id="username" name="username" required>
-				<label for="password">Password:</label>
-				<input class="large" type="password" id="password" name="passowrd" required>
-				<input class="sign-btn" type="submit" id="submit" name="submit" value="Login">
-			</form>
-		</div>
-		<div>
-		<h5 class="title"> Sign Up </h5>
-			<form method="post" action="" id="user_login" accept-charset="UTF-8">
-				<label for="username">Username:</label>
-				<input class="large" type="text" id="username" name="username" required>
-				<label for="password">Password:</label>
-				<input class="large" type="password" id="password" name="passowrd" required>
-				<label for="password"> Confirm Password:</label>
-				<input class="large" type="password" id="password" name="passowrd" required>
-				<input class="sign-btn" type="submit" id="submit" name="submit" value="Sign Up">
-			</form>
+		<div class="content grey">
+			<section>
+				<div class="user-login">
+					<h4 class="title"> Login </h4>
+					<form method="post" action="" id="user_login" accept-charset="UTF-8">
+						<label for="username">Username:</label>
+						<input class="large" type="text" id="username" name="username" required>
+						<label for="password">Password:</label>
+						<input class="large" type="password" id="password" name="passowrd" required>
+						<input class="sign-btn" type="submit" id="submit" name="submit" value="Login">
+					</form>
+				</div>
+				<div class="user-signup">
+				<h5 class="title"> Sign Up </h5>
+					<form method="post" action="" id="user_login" accept-charset="UTF-8">
+						<label for="username">Username:</label>
+						<input class="large" type="text" id="username" name="username" required>
+						<label for="password">Password:</label>
+						<input class="large" type="password" id="password" name="passowrd" required>
+						<label for="password"> Confirm Password:</label>
+						<input class="large" type="password" id="password" name="passowrd" required>
+						<input class="sign-btn" type="submit" id="submit" name="submit" value="Sign Up">
+					</form>
+				</div>
+			</section>
 		</div>
 	</main>
 	<footer>
@@ -61,5 +101,12 @@
 		</div>
 		<p class="copyright"> No rights reserved :O </p>
 	</footer>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/login.js"></script>
+
 </body>
 </html>
