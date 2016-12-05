@@ -141,6 +141,10 @@ Also all <main> starts at this point so it modifies content view.
 .content section {
 	padding-left: 16%;
 }
+.content form {
+	max-width: 30%;
+	min-width: 12em;
+}
 
 /*
 MENU Button
