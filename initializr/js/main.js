@@ -60,3 +60,18 @@ window.onclick = function(event) {
     }
   }
 }
+// Sorting the images displayed
+$(document).ready(function (event) {
+	//sort by date
+	if (!event.target.matches('.dropbtn')) {
+                $.ajax({
+                    type: "GET",
+                    url: "",
+                    success: function (data, textStatus, xhr) {
+                        $("#users").text(data);
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        console.log("Error: " + errorThrown);
+                    }
+                });
+            });
