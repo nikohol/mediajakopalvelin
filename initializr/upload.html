@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Upload</title>
+	<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/upload.css">
+
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+        <header>
+            <!--
+            topNav holds content for topmost navigation bar. In .css modify content with .topNav .left_logo .search .dropdown
+            -->
+            <nav class="topNav">
+                <div class="left_logo">
+                    <a href="index.html"><img src="img/GSLogo.png" alt="GameShare"/></a>
+                </div>
+                <div>
+                    <form method="post" id="search-form">
+                        <input class="search" type="text" name="search" placeholder="Search for content..." />
+                    </form>
+                    <a href="login.html">Login / Sign Up</a>
+                </div>
+                <div>
+                <!--
+                JavaScript callout for top right Menu button
+                -->
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn">Menu</button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="#">Upload</a>
+                            <a href="#">My profile</a>
+                            <a href="#">Admin tools</a>
+                        </div>
+                    </div>
+            </nav>
+            
+        </header>
+        <!--
+        Left navigation bar
+        -->
+        <nav class="left-nav">
+                <ul>
+                <li>
+                    <a href="#">&#9776;</a>
+                 </li>
+                <li>
+                    <a href="index.html">Most Recent</a>                        
+                </li>
+                <li>
+                    <a href="about.html">Popular</a>
+                 </li>
+                <li>
+                    <a href="development.html">Friends</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!--
+        Main content for uploading pictures
+        -->
+
+        <main>
+        	
+        <div class="content grey">
+
+        <h1>Upload image / video</h1>
+
+        	<section>
+
+	        	<form action="Upload" enctype="multipart/form-data" method="post">
+	               	<input type='file' onchange="readURL(this);" /><br><br>
+    				<img id="blah" src="#" alt="your image" />	<br>                
+    				<input type="submit" value="Upload"><br><br>
+	                <input type="text" name="describe" value="Title"><br><br>
+	            </form>
+
+
+
+            </section>
+
+        </div>
+
+        </main>
+
+	<footer>
+        <div class="footer-inner">
+            <div class="footer-col footer-left">
+                <a class="logo" href="index.html"><img src="img/GSLogo.png" alt="GameShare"/></a>
+                <!-- <div class="description">
+                    <p> A land for creatives sharing their works, projects, and process. Looking for an inspiration? You're on the right track.</p>
+                </div> -->
+            </div>
+            <div class="footer-col footer-right">
+                <ul class="extra">
+                    Maybe add something here later if need be!
+                </ul>
+            </div>
+        </div>
+            <p class="copyright"> No rights reserved :O </p>
+        </footer>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/upload.js"></script>
+
+    </div>
+</body>
+
+</html>
