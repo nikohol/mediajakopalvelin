@@ -85,11 +85,25 @@ public class GameShareSB {
         em.merge(com);
     }
 
-//SQL thingies.
+//User thingies.
     public List<User> readAllUsers() {
         List<User> ulst = em.createNamedQuery("User.findAll").getResultList();
         return ulst;
     }
+    public User readUserByUid(int uid){
+        User u = em.find(User.class, uid);
+        return u;
+    }
+    public User readUserByUsername(String username){
+        User u = em.find(User.class, username);
+        return u;
+    }
+    // This might not be needed at all
+    public User readUserByPword(String pword){
+        User u = em.find(User.class, pword);
+        return u;
+    }
+    //Comment thingies
     public List<Comments> readAllComments() {
         List<Comments> comlst = em.createNamedQuery("Comments.findAll").getResultList();
             return comlst;
