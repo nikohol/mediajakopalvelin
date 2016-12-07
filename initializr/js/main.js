@@ -36,10 +36,10 @@ window.onclick = function(event) {
 /*
 
 */
-$('.vasen-navi li:first-child').click(function(evt){
+/*$('.vasen-navi li:first-child').click(function(evt){
 				evt.preventDefault();
 				$('.vasen-navi li:not(:first)').slideToggle(400);
-			});
+			});*/
 /*
 Top right menu button and it's caleld withv myFunction();
 */
@@ -61,7 +61,7 @@ window.onclick = function(event) {
   }
 }
 // Sorting the images displayed
-$(document).ready(function (event) {
+/*$(document).ready(function (event) {
 	//sort by date
 	if (!event.target.matches('.dropbtn')) {
                 $.ajax({
@@ -74,4 +74,4 @@ $(document).ready(function (event) {
                         console.log("Error: " + errorThrown);
                     }
                 });
-            });
+            });*/

@@ -1,7 +1,5 @@
-html{
-	margin: 0;
-	padding: 0;
-	background-color: #F4511E;
+html {
+	background-color: #424242;
 }
 body{
 	margin: 0;
@@ -22,6 +20,12 @@ header{
 	height: auto;
 	padding: 10px;
 	box-shadow: 0 3px 10px #ddd;
+}
+.grey {
+    background-color: #424242;
+}
+.lightgrey {
+    background-color: #616161;
 }
 .topNav {
     flex-wrap: wrap;
@@ -66,6 +70,42 @@ header{
 	font-size: 45px;
 	margin: 20px 0; 
 	color: white;
+}
+/*
+.css for left navigation bar. Should be looking same all the time even when
+scrolling down on content.
+Also all <main> starts at this point so it modifies content view.
+*/
+
+.left-nav {
+    width: 16%;
+    height: 100%;
+    float: left;
+    padding-right: 1em;
+}
+
+.left-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.left-nav a {
+    font-family: 'Helvetica', sans-serif;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    line-height: 3em;
+    border-bottom: 1px #EDEEEF solid;
+    color: inherit;
+}
+
+.left-nav a:hover {
+    background-color: rgba(237,238,239,0.5);
+}
+
+.left-nav li:first-child {
+    display: none;
 }
 
 .imgTitle{
