@@ -4,6 +4,7 @@ body{
 	padding: 0;
 	width: 100%;
 	color: white;
+	font-family: 'Helvetica', sans-serif;
 	/*background-image: URL("../img/backgrounds/default.jpg");*/
 }
 
@@ -134,6 +135,10 @@ Also all <main> starts at this point so it modifies content view.
 	font-size: 45px;
 	margin: 20px 0; 
 	color: white;
+}
+.container {
+	margin: 0;
+	padding-left: 1em;
 }
 .content div{
 	padding: 1em;

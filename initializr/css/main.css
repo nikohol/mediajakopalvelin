@@ -70,6 +70,7 @@ body{
     padding: 0;
     width: 100%;
     color: white;
+    font-family: 'Helvetica', sans-serif;
     /*background-image: URL("../img/backgrounds/default.jpg");*/
 }
 
@@ -172,7 +173,7 @@ Also all <main> starts at this point so it modifies content view.
     float: right;
 }
 .content section {
-        padding-left: 16%;
+    padding-left: 16%;
 }
 .content h2 {
     text-align: right;
