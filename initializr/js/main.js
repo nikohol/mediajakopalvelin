@@ -60,12 +60,14 @@ window.onclick = function(event) {
     }
   }
 }
+/*
 // Sorting the images displayed
 $(document).ready(function (event) {
-	//sort by date
-	if (!event.target.matches('.dropbtn')) {
+	//sort by Most recent
+	if (!event.target.matches('.recent')) {
                 $.ajax({
                     type: "GET",
+					//add url
                     url: "",
                     success: function (data, textStatus, xhr) {
                         $("#users").text(data);
@@ -75,3 +77,13 @@ $(document).ready(function (event) {
                     }
                 });
             });
+	
+	//sort by most popular (most likes)
+	if (!event.target.matches('.popular')) {
+		
+	}
+	//show friends uploads by date
+	if (!event.target.matches('.friends')) {
+		
+	}
+*/

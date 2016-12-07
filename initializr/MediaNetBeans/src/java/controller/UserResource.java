@@ -62,7 +62,7 @@ public class UserResource {
         return job.build().toString();
     }
     //query to get user by username (needed for login)
-    @Form("/{username}")
+    @Path("/username")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public String getUserJson(@FormParam("username") String username) {
