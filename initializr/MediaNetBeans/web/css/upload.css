@@ -202,10 +202,12 @@ Main content classes
     padding-left: 16%;
 }
 .upload form {
-    border: 1px;
+    border: 1em;
+    border-color: #524450;
 }
 .upload input {
-    border: 1px;
+    border: 1em;
+    border-color: #524450;
 }
 input[type=text]{
     color: black;

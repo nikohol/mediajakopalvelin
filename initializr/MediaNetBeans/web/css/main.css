@@ -92,7 +92,7 @@ header{
     
 }
 .topNav {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding: 0;
     margin: 0;
     display: flex;
