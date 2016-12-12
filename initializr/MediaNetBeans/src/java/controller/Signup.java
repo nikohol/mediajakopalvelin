@@ -63,7 +63,7 @@ public class Signup extends HttpServlet {
             
             int i=ps.executeUpdate();
             if(i>0){
-               RequestDispatcher view = request.getRequestDispatcher("Login.do");
+               RequestDispatcher view = request.getRequestDispatcher("Logging");
                 view.forward(request, response);
             }             
         } catch (Exception e) {
