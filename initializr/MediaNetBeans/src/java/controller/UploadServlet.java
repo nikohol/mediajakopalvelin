@@ -7,6 +7,8 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import static java.lang.System.console;
+import static java.lang.System.out;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -52,6 +54,7 @@ public class UploadServlet extends HttpServlet {
         
     }
     private static String getFile(Part part) {
+        out.print("testi");
         for (String c : part.getHeader("content-disposition").split(";")) {
             
             if (c.trim().startsWith("filename")) {
