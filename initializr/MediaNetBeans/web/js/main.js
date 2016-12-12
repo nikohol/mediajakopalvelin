@@ -60,8 +60,8 @@ window.onclick = function(event) {
     }
   }
 }
-function myFunction(changeContent){
-    document.getElementById("pageContent").innerHTML = "" + name;
+function changeContent(showing){
+        document.getElementById("pageContent").innerHTML = showing;
 }
 /*
 // Sorting the images displayed

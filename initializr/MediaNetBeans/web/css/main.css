@@ -131,7 +131,9 @@ Also all <main> starts at this point so it modifies content view.
     width: 16%;
     height: 100%;
     float: left;
+    background-color: #5A5A5A;
 }
+
 
 .left-nav ul {
     list-style-type: none;
@@ -139,16 +141,21 @@ Also all <main> starts at this point so it modifies content view.
     margin: 0;
 }
 
-.left-nav a {
+.left-nav button {
     text-decoration: none;
     display: block;
     text-align: center;
     line-height: 3em;
     border-bottom: 1px #EDEEEF solid;
     color: inherit;
+    width: 100%;    
+    background-color: #555;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
 }
 
-.left-nav a:hover {
+.left-nav button:hover {
     background-color: rgba(237,238,239,0.5);
 }
 
@@ -212,12 +219,12 @@ input[type=text]{
     font-family: 'Helvetica';
     font-size: 16px;
 }
-.container figure:hover > figcaption{
+/*.container figure:hover > figcaption{
     display: block;
     position: absolute;
     top: 0px;
     width: 100%;
-}
+}*/
 
 /*
 .css for footer

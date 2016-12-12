@@ -56,13 +56,16 @@
         <nav class="left-nav">
                 <ul>
                 <li>
-                    <button onclick="myFunction('Most Recent')">Most Recent</button>
-                 </li>
-                <li>
-                    <button onclick="myFunction('Popular')">Popular</button>                        
+                    <a href="#">&#9776;</a>
                 </li>
                 <li>
-                    <button onclick="myFunction('Friends')">Friends</button>
+                    <button onclick="changeContent('Recent')">Recent</button>
+                 </li>
+                <li>
+                    <button onclick="changeContent('Popular')">Popular</button>                        
+                </li>
+                <li>
+                    <button onclick="changeContent('Friends')">Friends</button>
                  </li>
 
             </ul>
@@ -74,7 +77,7 @@
                 
                 <section>
                     <article class="title">
-                        <h2 id="pageContent">Most Recent</h2>
+                        <h2 id="pageContent">Recent</h2>
                     </article>
                     
                     <ul class="container">
