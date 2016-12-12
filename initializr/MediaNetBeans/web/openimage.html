@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Login</title>
+<link href="css/openimage.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+</head>
+    <body>
+		<header>
+			<nav class="topNav">
+                <div class="left_logo">
+                    <a href="index.html"><img src="img/GSLogo.png" alt="GameShare"/></a>
+                </div>
+                <div>
+                    <form method="post" id="search-form">
+                        <input class="search" type="text" name="search" placeholder="Search for content..." />
+                    </form>
+                    <a href="login.html">Login / Sign Up</a>
+                </div>
+                <div>
+                    <div class="dropdown">
+						<button onclick="myFunction()" class="dropbtn">Menu</button>
+						<div id="myDropdown" class="dropdown-content">
+                        <a href="upload.html">Upload</a>
+                        <a href="#">My profile</a>
+                        <a href="#">Admin tools</a>
+                    </div>
+					</div>
+                </div>
+            </nav>
+        </header>
+<!--
+:(
+-->
+        <nav class="left-nav">
+                <ul>
+                <li>
+                    <a href="#">&#9776;</a>
+                 </li>
+                <li>
+                    <a href="index.html">Most Recent</a>                        
+                </li>
+                <li>
+                    <a href="index.html">Popular</a>
+                 </li>
+                <li>
+                    <a href="index.html">Friends</a>
+                </li>
+            </ul>
+        </nav>
+<!--
+Jouluhimmeli
+-->
+        <main>
+            <div class="grey">
+                 <!-- get the title of the image / video with from database -->   
+				<h1 class="imgTitle"> Happycat! </h1>
+                <figure>
+                    <img src="http://placekitten.com/400/361">					
+                </figure>
+				<figcaption>
+					<article class= "likecounter"> integer from sql likes!</article>
+				</figcaption>
+				<input class="likes" type="submit" id="like" name="like" value="Like!"><br>
+				<h2 class="imgTitle"> Comments</h2>
+                <section class="comments">
+					<!-- get the comments from sql!!!!!! -->
+                    <li><article>This is a comment</article></li>
+                    <li><article>Another</article></li>
+                    <li><article>more comment</article></li>
+                </section>
+				<form>
+						<!-- comment input & report / comment buttons both intentionally require input! -->
+						<input class="write" type="text" id="write" name="comment" placeholder="Write a comment or report content message!" required /><br>
+						<input class="submit" type="submit" id="comment" name="like" value="Comment!">
+						<input class="submit" type="submit" id="comment" name="like" value="Report!">
+				</form>
+            </div>
+        </main> 
+		<footer>
+		<div class="footer-inner">
+			<div class="footer-col footer-left">
+				<a class="logo" href="index.html"><img src="img/GSLogo.png" alt="GameShare"/></a>
+				<!-- <div class="description">
+					<p> A land for creatives sharing their works, projects, and process. Looking for an inspiration? You're on the right track.</p>
+				</div> -->
+			</div>
+			<div class="footer-col footer-right">
+				<ul class="extra">
+					Maybe add something here later if need be!
+				</ul>
+			</div>
+		</div>
+		<p class="copyright"> No rights reserved :O </p>
+		</footer>
+		<script src="js/openimage.js"></script>
+    </body>
+</html>

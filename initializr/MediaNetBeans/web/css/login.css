@@ -1,0 +1,266 @@
+
+body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	color: white;
+	font-family: 'Helvetica', sans-serif;
+	/*background-image: URL("../img/backgrounds/default.jpg");*/
+}
+
+/*this header is a navigation bar */
+
+/*header{
+    text-align: center;
+    position: relative;
+    font-family: 'Helvetica', sans-serif;
+    background-color: red;
+    min-height: 3em;
+    padding: 10px;
+    box-shadow: 0 3px 10px #ddd;
+}
+/*header {
+    width: 100%
+    height: 10%;
+}*/
+/*
+.left_logo img{
+    height: 3em;
+    width: relative;
+}
+.topNav {
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+*/
+header{
+    text-align: center;
+    position: relative;
+    font-family: 'Helvetica', sans-serif;
+    background-color: red;
+    min-height: 3em;
+    padding: 10px;
+    box-shadow: 0 3px 10px #ddd;
+    
+}
+.topNav {
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left_logo img{
+    height: 3em;
+    width: relative;
+}
+.search{
+    font-size: 15px;
+    width: 200px;
+    padding: 5px 5px 5px 35px;
+    border-radius: 4px;
+    border: none;
+    background-color: white;
+    background-position: 5px 50%;
+    color: red;   
+}
+.login_logo {
+    display: inline;
+    height: relative;
+}
+.topNav div {
+    font-family: 'Helvetica'
+}
+/*
+.css for left navigation bar. Should be looking same all the time even when
+scrolling down on content.
+Also all <main> starts at this point so it modifies content view.
+*/
+
+.left-nav {
+    width: 16%;
+    height: 100%;
+    float: left;
+}
+
+.left-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.left-nav a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    line-height: 3em;
+    border-bottom: 1px #EDEEEF solid;
+    color: inherit;
+}
+
+.left-nav a:hover {
+    background-color: rgba(237,238,239,0.5);
+}
+
+.left-nav li:first-child {
+    display: none;
+}
+
+/*
+.css for modifying content of the website
+*/
+
+.grey {
+    background-color: #424242;
+}
+.lightgrey {
+    background-color: #616161;
+}
+
+/* Main stuff starts here */
+/*main{
+	margin: 100px 50px;
+	display: flex;
+	justify-content: space-around;
+	
+}*/
+
+.title{
+	font-family: 'Helvetica', sans-serif;
+	font-size: 45px;
+	margin: 20px 0; 
+	color: white;
+}
+.container {
+	margin: 0;
+	padding-left: 1em;
+}
+.content div{
+	padding: 1em;
+}
+.content section {
+	padding-left: 16%;
+}
+.content form {
+	max-width: 30%;
+	min-width: 12em;
+}
+
+/*
+MENU Button
+
+css for menubutton in topright corner
+*/
+.dropbtn {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    font-size: 10px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: black;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    float:right;
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+@media (max-width: 800px){
+    footer .logo img{
+        width: 20%;
+    }
+}
+
+#user_login > label{
+	display: block;
+	margin: 25px 0 10px 0;
+	font-family: 'Helvetica', sans-serif;
+	color: white;
+	font-size: 20px;
+}
+
+#user_login > input{
+	display: block;
+	font-size: 20px;
+}
+
+#submit{
+	margin-top: 30px;
+	height: 40px;
+	width: 50%;
+	background-color: red;
+	border: 5px solid white;
+	color: white;
+}
+
+#username, #password{
+	width: 150%;
+	height: 30px;
+}
+
+@media (max-width: 800px){
+	main{
+		flex-direction: column;
+	}
+	
+	#username, #password{
+		width: 100%;
+	}
+}
+/* Footer stuff*/
+footer {
+	box-shadow: 0 -3px 10px #ddd;
+	padding: 25px 10px 20px 10px;
+	text-align: center;
+	background: red;
+	color: white;
+}
+
+footer > p{
+	font-family: 'Helvetica', sans-serif;
+}
+
+@media (max-width: 800px){
+	footer .logo img{
+		width: 20%;
+	}
+}
