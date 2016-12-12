@@ -31,12 +31,15 @@ public abstract class JSONstring {
                 Map<String,Object> columnMap = new HashMap<String, Object>();
                 for(int columnIndex=1;columnIndex<=meta.getColumnCount();columnIndex++)
                 {
-                    if(result.getString(meta.getColumnName(columnIndex))== null)
-                        columnMap.put(meta.getColumnLabel(columnIndex), "");     
-                    else if (result.getString(meta.getColumnName(columnIndex)).chars().allMatch(Character::isDigit))
+                    if(result.getString(meta.getColumnName(columnIndex))== null){
+                        columnMap.put(meta.getColumnLabel(columnIndex), "");
+                    }
+                    else if (result.getString(meta.getColumnName(columnIndex)).chars().allMatch(Character::isDigit)){
                          columnMap.put(meta.getColumnLabel(columnIndex),Integer.parseInt(result.getString(meta.getColumnName(columnIndex))));
-                    else
+                    }
+                    else{
                         columnMap.put(meta.getColumnLabel(columnIndex),result.getString(meta.getColumnName(columnIndex)));
+                    }
                 }
                 list.add(columnMap);
             }

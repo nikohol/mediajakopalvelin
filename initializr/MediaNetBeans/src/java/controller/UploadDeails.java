@@ -67,20 +67,23 @@ public class UploadDeails extends HttpServlet {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             connect = DriverManager.getConnection(cURL, "miikkatk", "seagh3id");
             //Inserting information about the upload to the Content table
-            PreparedStatement statement=connect.prepareStatement("INSERT INTO Content VALUES(null,?,?,?,?,?,0)");
+            PreparedStatement statement=connect.prepareStatement("INSERT INTO Content VALUES(null,?,?,?,?,0)");
             statement.setInt(1, userID);
             statement.setString(2, title);
             statement.setString(3, location);
             statement.setString(4, date.format(currdate));          
             //statement.setString(6, "thumb/"+file);
             
+            //executes the insertation
             int i=statement.executeUpdate();
             if(i>0){              
                RequestDispatcher view = request.getRequestDispatcher("UploadResult");
                view.forward(request, response);
             }
+            //gets the contentid(cid) from the content table and executes the query
             PreparedStatement getContentid = connect.prepareStatement("SELECT cid FROM Content WHERE title = "+title);
             int cid = getContentid.executeUpdate();
+            //inserts the tag and executes it
             PreparedStatement statement2 = connect.prepareStatement("INSERT INTO Tags VALUES(null,?,?)");
             statement2.setInt(1, cid);
             statement2.setString(2, tag);
