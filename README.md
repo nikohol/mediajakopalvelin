@@ -1,11 +1,11 @@
 # GameShare
-mediajakopalvelin pelaajille
+Media sharing platform made for gamers
 
 #Install
 
 Install Glassfish server and SQL
 
-Clone repo inti server
+Clone repo into server
 
 #Team
 
