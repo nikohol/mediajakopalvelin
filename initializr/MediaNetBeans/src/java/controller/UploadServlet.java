@@ -53,6 +53,7 @@ public class UploadServlet extends HttpServlet {
     }
     private static String getFile(Part part) {
         for (String c : part.getHeader("content-disposition").split(";")) {
+            
             if (c.trim().startsWith("filename")) {
                 return c.substring(c.indexOf('=') + 1).trim().replace("\"", "");
             }

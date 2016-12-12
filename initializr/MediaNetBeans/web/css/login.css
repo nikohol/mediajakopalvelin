@@ -121,6 +121,9 @@ Also all <main> starts at this point so it modifies content view.
 .lightgrey {
     background-color: #616161;
 }
+input[type=text]{
+    color: black;
+}
 
 /* Main stuff starts here */
 /*main{

@@ -77,19 +77,21 @@
 
         <h1>Upload image / video</h1>
 
-        	<section>
+            <section class="upload">
 
 	        	<form action="Upload" enctype="multipart/form-data" method="post">
 	               	<input type='file' onchange="readURL(this);" /><br><br>
-    				<img id="blah" src="#" alt="your image" />	<br>                
-    				<input type="submit" value="Upload"><br><br>
-	                <input type="text" name="describe" value="Title"><br><br>
-	            </form>
-
-
+    			<img id="blah" src="#" alt="your image" /><br>                
+	            	
+                        <h2>Title</h2><br>
+	            	<input type="text" name="title"><br><br>
+                        
+                        <h2>Tags</h2><br>
+                        <input type="text" name="tags"><br><br>
+                        
+    			<input type="submit" value="Upload"><br><br>
 
             </section>
-
         </div>
 
         </main>
