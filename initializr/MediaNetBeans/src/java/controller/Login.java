@@ -38,7 +38,7 @@ public class Login extends HttpServlet{
             hsession.setAttribute("connection:","true");
             hsession.setAttribute("login:", user);
             //creates current user
-            User current = new User();
+            User currUser = new User();
             
             RequestDispatcher getUser = request.getRequestDispatcher("GetUser.do");
             getUser.include(request,response);
