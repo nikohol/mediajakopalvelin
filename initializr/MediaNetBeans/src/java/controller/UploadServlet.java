@@ -22,7 +22,7 @@ import javax.servlet.http.Part;
  */
 @WebServlet(name = "UploadServlet", urlPatterns = {"/UploadServlet"})
 //defines the allowed file and request sizes (5MB)
-@MultipartConfig(location = "/home/glassfish/glassfish4/glassfish/domains/domain1/applications/upload/thumb",//or whatever our server will be
+@MultipartConfig(location = "/var/www/html/img/content",//or whatever our server will be
         fileSizeThreshold = 1024*1024, maxFileSize = 1024*1024*5, maxRequestSize = 1024*1024*5)
 
 public class UploadServlet extends HttpServlet {
