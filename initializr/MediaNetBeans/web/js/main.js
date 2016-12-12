@@ -60,6 +60,9 @@ window.onclick = function(event) {
     }
   }
 }
+function changeContent(showing){
+        document.getElementById("pageContent").innerHTML = showing;
+}
 /*
 // Sorting the images displayed
 $(document).ready(function (event) {
