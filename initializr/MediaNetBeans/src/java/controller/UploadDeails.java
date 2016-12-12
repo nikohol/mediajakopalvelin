@@ -60,6 +60,7 @@ public class UploadDeails extends HttpServlet {
         String tag = request.getParameter("tags");
 
         try {
+            //connecting to database
             String connectionURL = "jdbc:mysql://10.114.32.81:3306/Sharing"; 
             Connection connection = null;
             Class.forName("com.mysql.jdbc.Driver").newInstance();
