@@ -201,6 +201,15 @@ Main content classes
 .content section {
     padding-left: 16%;
 }
+.upload form {
+    border: 1px;
+}
+.upload input {
+    border: 1px;
+}
+input[type=text]{
+    color: black;
+}
 
 
 /*

@@ -6,6 +6,7 @@ html {
     line-height: 1.4;
 }
 
+
 ::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
@@ -164,6 +165,9 @@ Also all <main> starts at this point so it modifies content view.
 }
 .lightgrey {
     background-color: #616161;
+}
+input[type=text]{
+    color: black;
 }
 .title {
     display: inline-block;
