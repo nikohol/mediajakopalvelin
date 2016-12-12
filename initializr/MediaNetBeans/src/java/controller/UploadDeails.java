@@ -21,12 +21,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import model.User;
+import model.Content;
 
 /**
  *
  * @author Miikka
  */
-
+//OOOPS typo, meant to be Details :|
 public class UploadDeails extends HttpServlet {
 
     // again we're just interested in the doPost!!!
@@ -53,7 +54,7 @@ public class UploadDeails extends HttpServlet {
         Integer userID = ((User)hsession.getAttribute("currentUser")).getUid();
         Date currdate = new Date();
         DateFormat date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        
+        //gets input from the html form
         String title = request.getParameter("title");
         String location = request.getParameter("location");
         String file = (String)hsession.getAttribute("file");
@@ -61,28 +62,35 @@ public class UploadDeails extends HttpServlet {
 
         try {
             //connecting to database
-            String connectionURL = "jdbc:mysql://10.114.32.81:3306/Sharing"; 
-            Connection connection = null;
+            String cURL = "jdbc:mysql://10.114.32.81:3306/Sharing"; 
+            Connection connect = null;
             Class.forName("com.mysql.jdbc.Driver").newInstance();
-            connection = DriverManager.getConnection(connectionURL, "miikkatk", "seagh3id");
+            connect = DriverManager.getConnection(cURL, "miikkatk", "seagh3id");
+            //Inserting information about the upload to the Content table
+            PreparedStatement statement=connect.prepareStatement("INSERT INTO Content VALUES(null,?,?,?,?,?,0)");
+            statement.setInt(1, userID);
+            statement.setString(2, title);
+            statement.setString(3, location);
+            statement.setString(4, date.format(currdate));          
+            //statement.setString(6, "thumb/"+file);
             
-            PreparedStatement ps=connection.prepareStatement
-                  ("INSERT INTO images VALUES(null,?,?,?,?,?,0,0,?,1,?,?)");
-            ps.setString(1, title);
-            ps.setString(2, date.format(currdate));
-            ps.setString(3, location);
-            ps.setInt(4, userID);
-            ps.setString(5, "thumb/"+file);
-            ps.setString(6, tag);
-            
-            int i=ps.executeUpdate();
-            
+            int i=statement.executeUpdate();
             if(i>0){              
                RequestDispatcher view = request.getRequestDispatcher("UploadResult");
                view.forward(request, response);
-            }             
+            }
+            PreparedStatement getContentid = connect.prepareStatement("SELECT cid FROM Content WHERE title = "+title);
+            int cid = getContentid.executeUpdate();
+            PreparedStatement statement2 = connect.prepareStatement("INSERT INTO Tags VALUES(null,?,?)");
+            statement2.setInt(1, cid);
+            statement2.setString(2, tag);
+            int j=statement2.executeUpdate();
+            if(j>0){
+                RequestDispatcher view2 = request.getRequestDispatcher("UploadResult");
+                view2.forward(request, response);
+            }
         } catch (Exception e) {
-            out.println("Error!" + e.getMessage());
+            out.println("Error!" + e);
         } finally {
             out.close();
         }
