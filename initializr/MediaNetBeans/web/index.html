@@ -1,16 +1,191 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
+<!doctype html>
+<html class="no-js" lang="">
     <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GameShare</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js"></script>
     </head>
+
+
     <body>
-        <div>TODO write content</div>
+
+    <!--
+    In the header there is topmost navigation bar which includes logo (a link back to home), search bar, login/signup and on the right the is menu button made with .js and that button includes functionalities for different user tools
+    -->
+
+        <header>
+            <!--
+            topNav holds content for topmost navigation bar. In .css modify content with .topNav .left_logo .search .dropdown
+            -->
+            <nav class="topNav">
+                <div class="left_logo">
+                    <a href="index.html"><img src="img/GSLogo.png" alt="GameShare"/></a>
+                </div>
+                <div>
+                    <form method="post" id="search-form">
+                        <input class="search" type="text" name="search" placeholder="Search for content..." />
+                    </form>
+                    <a href="login.html">Login / Sign Up</a>
+                </div>
+                <div>
+                <!--
+                JavaScript callout for top right Menu button
+                -->
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn">Menu</button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="upload.html">Upload</a>
+                            <a href="#">My profile</a>
+                            <a href="#">Admin tools</a>
+                        </div>
+                    </div>
+            </nav>
+            
+        </header>
+
+        <nav class="left-nav">
+                <ul>
+                <li>
+                    <a href="#">&#9776;</a>
+                 </li>
+                <li>
+                    <a href="index.html">Most Recent</a>                        
+                </li>
+                <li>
+                    <a href="index.html">Popular</a>
+                 </li>
+                <li>
+                    <a href="index.html">Friends</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+
+            <div class="content grey">
+                
+                <section>
+                    <article class="title">
+                        <h2>Most Recent</h2>
+                    </article>
+                    
+                    <ul class="container">
+                        <li>
+                            <figure>
+                                <img src="http://placekitten.com/400/361">
+                                <figcaption>
+                                    <h3>Title</h3>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="http://placekitten.com/400/361">
+                                <figcaption>
+                                    <h3>Title</h3>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="http://placekitten.com/400/361">
+                                <figcaption>
+                                    <h3>Title</h3>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="http://placekitten.com/400/361">
+                                <figcaption>
+                                    <h3>Title</h3>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="http://placekitten.com/400/361">
+                                <figcaption>
+                                    <h3>Title</h3>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="http://placekitten.com/400/361">
+                                <figcaption>
+                                    <h3>Title</h3>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="http://placekitten.com/400/361">
+                                <figcaption>
+                                    <h3>Title</h3>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="http://placekitten.com/400/361">
+                                <figcaption>
+                                    <h3>Title</h3>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="http://placekitten.com/400/361">
+                                <figcaption>
+                                    <h3>Title</h3>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        
+
+                    </ul>
+                </section>    
+            </div>
+
+        </main>
+        <!--
+        Below there might lie chtulhu.
+        -->
+        <footer>
+            <div class="footer-inner">
+                <div class="footer-col footer-left">
+                    <a class="logo" href="index.html"><img src="img/GSLogo.png" alt="GameShare"/></a>
+                    <!-- <div class="description">
+                        <p> A land for creatives sharing their works, projects, and process. Looking for an inspiration? You're on the right track.</p>
+                    </div> -->
+                </div>
+                <div class="footer-col footer-right">
+                    <ul class="extra">
+                        Maybe add something here later if need be!
+                    </ul>
+                </div>
+            </div>
+            <p class="copyright"> No rights reserved :O </p>
+        </footer>
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        
+
     </body>
 </html>
