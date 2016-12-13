@@ -3,14 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Stuff;
+package controller;
 
+import model.Content;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.util.List;
+import javax.json.Json;
+import javax.json.JsonArray;
+import javax.json.JsonArrayBuilder;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,7 +25,11 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Miikka
  */
-public class ContentJSON extends HttpServlet {
+@WebServlet(name = "Contents", urlPatterns = {"/Contents"})
+public class Contents extends HttpServlet {
+    
+    EntityManagerFactory emf;
+    EntityManager em;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,26 +42,38 @@ public class ContentJSON extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        response.setContentType("application/JSON");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            try{
-            //connecting to database   
-            String connectionURL = "jdbc:mysql://10.114.32.81:3306/Sharing"; 
-            Connection connect = null;
-            Class.forName("com.mysql.jdbc.Driver").newInstance();
-            connect = DriverManager.getConnection(connectionURL, "miikkatk", "seagh3id");
-            
-            PreparedStatement statement = connect.prepareStatement("SELECT * FROM Content");
-            ResultSet result = statement.executeQuery();
-            String JSONString = GetJSONString.getJSONFromResultSet(result,"Content");
-            
-            out.print(JSONString);
-            }catch(Exception e){
-                System.out.println("Error! "+e);
+
+        response.setContentType("application/json;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+
+        try {
+
+            emf = Persistence.createEntityManagerFactory("MediaNetBeansPU");
+            em = emf.createEntityManager();
+
+            JsonArrayBuilder builder = Json.createArrayBuilder();
+
+            for (Content c : (List<Content>) em.createNamedQuery("Content.findAll").getResultList()) {
+                String contentLocation = c.getLocation();
+                
+                builder.add(Json.createObjectBuilder()
+            .add("path", contentLocation)
+            .add("id", c.getCid())
+            .add("title", c.getTitle()));
             }
+
+            JsonArray arr = builder.build();
+
+            out.println(arr);
+            
+        } catch (Exception e) {
+            out.println(e);
+        } finally {
+            em.close();
+            emf.close();
+            out.close();
         }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

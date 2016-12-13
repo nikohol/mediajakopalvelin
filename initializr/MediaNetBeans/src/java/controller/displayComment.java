@@ -5,88 +5,81 @@
  */
 package controller;
 
-
-import model.User;
+import model.Comments;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.List;
+import javax.json.Json;
+import javax.json.JsonArray;
+import javax.json.JsonArrayBuilder;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.persistence.Query;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.*;
-import com.google.gson.Gson;
-
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  *
  * @author Miikka
  */
-@WebServlet(name = "Login", urlPatterns = {"/Login"})
-public class Login extends HttpServlet {
-    
+@WebServlet(name = "displayComment", urlPatterns = {"/Comment/*"})
+public class displayComment extends HttpServlet {
+
     EntityManagerFactory emf;
     EntityManager em;
-    Boolean logged;
-    
+
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        response.setContentType("application/json;charset=UTF-8");
+        String ContentRaw = request.getPathInfo().substring(1);
         try (PrintWriter out = response.getWriter()) {
-        try {
-            
-            emf = Persistence.createEntityManagerFactory("MediaNetBeansPU");
+            try {
+
+                emf = Persistence.createEntityManagerFactory("MediaNetBeansPU");
                 em = emf.createEntityManager();
-                logged = false;
+
+                JsonArrayBuilder builder = Json.createArrayBuilder();
+
+                int ContentID = Integer.parseInt(ContentRaw);
                 
-                
-                String username = request.getParameter("username");
-                String password = request.getParameter("password");
-                
-                User loginUser = new User();
-                loginUser.setUsername(username);
-                loginUser.setPword(password);
-                
-                Query q = em.createQuery("SELECT username FROM User");
-                List<User> userList = q.getResultList();
-                boolean userAdmin = false;
-                int userId = 0;
-                for (User user : userList) {
-                     if (loginUser.getUsername().equalsIgnoreCase(user.getUsername())&&loginUser.getPword().equals(user.getPword())) { 
-                        logged = true;
-                        userAdmin = user.getAdmin();
-                        userId = user.getUid();
+
+                for(Comments c : (List<Comments>) em.createQuery("SELECT c FROM Comments c").getResultList()) {
+
+                    if (ContentID == c.getComid()) {
+                        builder.add(Json.createObjectBuilder()
+                                .add("comment", c.getComment())
+                                .add("username", c.getUid().getUsername())
+                                .add("id", c.getComid()));
+                    } else {
                         
-                    } 
+                    }
                     
                 }
-                 
-               String json;
-               List<String> details = new ArrayList<String>();
-               details.add(loginUser.getUsername());
-               details.add(Boolean.toString(userAdmin));
-               details.add(Integer.toString(userId));
-               
-                if (logged==true){
-                     json = new Gson().toJson(details);
-                } 
-                else{
-                    List<Boolean> details2 = new ArrayList<Boolean>();
-                    details2.add(false);
-                    json = new Gson().toJson(details2);
-                }
-                out.write(json);
                 
+                JsonArray arr = builder.build();
+                out.println(arr);
+
             } catch (Exception e) {
-                out.println("OOPS! : " + e);
+                out.println(e);
             } finally {
                 em.close();
                 emf.close();
+                out.close();
             }
-    }
+        }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
