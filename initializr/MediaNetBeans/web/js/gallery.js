@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+/*
 function show_comments(id) {
     $.ajax({
         method:"POST",
@@ -108,4 +108,4 @@ function read_image(id) {
     });
 };
 
-
+*/
