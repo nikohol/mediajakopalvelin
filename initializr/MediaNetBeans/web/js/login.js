@@ -27,9 +27,9 @@ function login() {
                             }
                         } else {
 
-                            sessionStorage.setItem('user', parsedData[0]);
-                            sessionStorage.setItem('role', parsedData[1]);
-                            sessionStorage.setItem('userId', parsedData[2]);
+                            sessionStorage.setItem('Username', parsedData[0]);
+                            sessionStorage.setItem('Admin', parsedData[1]);
+                            sessionStorage.setItem('Uid', parsedData[2]);
 
                             logged = true;
                             window.location.replace('index.html');
@@ -57,20 +57,9 @@ function onLoad() {
 
     var status = sessionStorage.getItem('loggedIn');
     if (!status) {
-        sessionStorage.setItem('loggedIn', 'no');
+        sessionStorage.setItem('loggedIn', false);
         status = sessionStorage.getItem('loggedIn');
     }
 
-    if (status === false) {//out
-        $("#logout").hide();
-        $("#user").empty();
-
-    }
-    else {//in
-        $("#login1").hide();
-        $("#user").empty();
-        $("#user").append(sessionStorage.getItem('user'));
-
-    }
 
 }
